@@ -3,18 +3,25 @@
 import styled from "styled-components";
 
 const Wrap = styled.div`
-  padding: 10px;
+  height: 100vh;
 `;
 const Nav = styled.div`
+  margin: 10px;
   div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   a button {
     width: 100%;
+    margin-bottom: 15px;
   }
 `;
-const Main = styled.div``;
+const Main = styled.div`
+  margin: 10px;
+  div {
+    font-size: 20px;
+  }
+`;
 export { Wrap, Nav, Main };

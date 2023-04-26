@@ -1,10 +1,9 @@
 import Link from "next/link";
 import LogOutBtn from "../../components/LogOutBtn";
 import { Nav, Wrap, Main } from "./LoginPageComponent";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import NoteList from "./NoteList";
 import { connectDB } from "@/util/database";
+import Ad from "@/components/ad";
 
 export default async function LoginPage({ session }) {
   const db = (await connectDB).db("forum");
@@ -25,6 +24,7 @@ export default async function LoginPage({ session }) {
       <Main>
         <NoteList />
       </Main>
+      <Ad />
     </Wrap>
   );
 }
