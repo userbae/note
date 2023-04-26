@@ -23,5 +23,11 @@ const Main = styled.div`
   div {
     font-size: 20px;
   }
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+  }
 `;
 export { Wrap, Nav, Main };

@@ -3,7 +3,7 @@ import LogOutBtn from "../../components/LogOutBtn";
 import { Nav, Wrap, Main } from "./LoginPageComponent";
 import NoteList from "./NoteList";
 import { connectDB } from "@/util/database";
-import Ad from "@/components/ad";
+import Ad from "@/components/Ad";
 
 export default async function LoginPage({ session }) {
   const db = (await connectDB).db("forum");
