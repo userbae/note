@@ -14,8 +14,11 @@ const Nav = styled.div`
     margin-bottom: 15px;
   }
   a button {
+    font-size: 18px;
     width: 100%;
-    margin-bottom: 15px;
+    padding: 10px;
+    height: 50px;
+    margin-bottom: 10px;
   }
 `;
 const Main = styled.div`
@@ -27,7 +30,7 @@ const Main = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 `;
 export { Wrap, Nav, Main };

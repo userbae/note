@@ -4,11 +4,15 @@ import styled from "styled-components";
 
 const Wrap = styled.div`
   padding: 10px;
-`;
-const Nav = styled.div`
-  display: flex;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    button {
+      width: 100%;
+    }
+  }
 `;
 
-const Main = styled.div``;
-
-export { Nav, Main, Wrap };
+export { Wrap };
