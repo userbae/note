@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
+import styled from "./detail.module.css";
 
 export default async function Detail(props) {
   const db = (await connectDB).db("note");
@@ -9,12 +10,25 @@ export default async function Detail(props) {
     .findOne({ _id: new ObjectId(props.params.id) });
 
   return (
-    <div>
-      <Link href="/">홈으로 가기</Link>
-      <h4>상세페이지</h4>
-      <h4>{result.title}</h4>
+    <div className={styled.wrap}>
+      <div className={styled.nav}>
+        <h3>{result.title}</h3>
+      </div>
       <hr />
-      <p>{result.content}</p>
+      <pre
+        style={{
+          wordBreak: "break-all",
+          whiteSpace: "pre-wrap",
+        }}
+      >
+        {result.content}
+      </pre>
+      <div className={styled.bot}>
+        <button>수정하기</button>
+        <Link href="/">
+          <button>홈</button>
+        </Link>
+      </div>
     </div>
   );
 }

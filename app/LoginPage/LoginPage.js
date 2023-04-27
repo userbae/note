@@ -1,17 +1,17 @@
 import Link from "next/link";
 import LogOutBtn from "../../components/LogOutBtn";
-import { Nav, Wrap, Main } from "./LoginPageComponent";
 import NoteList from "./NoteList";
 import { connectDB } from "@/util/database";
-import Ad from "@/components/Ad";
+import Ad from "@/app/Ad";
+import styled from "./LoginPage.module.css";
 
 export default async function LoginPage({ session }) {
   const db = (await connectDB).db("forum");
   let result = await db.collection("post").find().toArray();
 
   return (
-    <Wrap>
-      <Nav>
+    <div className={styled.wrap}>
+      <div className={styled.nav}>
         <div>
           {session.user.name}님의 메모장
           <LogOutBtn />
@@ -20,11 +20,11 @@ export default async function LoginPage({ session }) {
         <Link href="/write">
           <button>메모장 추가하기</button>
         </Link>
-      </Nav>
-      <Main>
+      </div>
+      <div className={styled.main}>
         <NoteList />
-      </Main>
+      </div>
       <Ad />
-    </Wrap>
+    </div>
   );
 }

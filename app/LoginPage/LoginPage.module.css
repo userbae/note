@@ -1,0 +1,40 @@
+.wrap {
+  height: 100vh;
+}
+.nav {
+  padding: 10px;
+}
+.nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.nav a button {
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+}
+
+.main {
+  padding: 10px;
+}
+
+.main div {
+  font-size: 20px;
+}
+.main p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0;
+}
+.main a {
+  display: flex;
+  align-items: center;
+}
+.main a span {
+  font-size: 10px;
+  margin-right: 5px;
+}

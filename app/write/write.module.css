@@ -1,0 +1,10 @@
+.wrap {
+  padding: 10px;
+}
+.wrap form {
+  display: flex;
+  flex-direction: column;
+}
+.wrap a button {
+  width: 100%;
+}

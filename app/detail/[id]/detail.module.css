@@ -1,0 +1,23 @@
+.wrap {
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+}
+
+.wrap h3 {
+  font-size: 20px;
+}
+.bot {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+  width: 95%;
+  gap: 5px;
+}
+.bot button {
+  width: 100%;
+  font-size: 20px;
+}

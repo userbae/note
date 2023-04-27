@@ -20,6 +20,7 @@ export default function NoteList(props) {
             return (
               <div key={i}>
                 <Link prefetch={false} href={`detail/${a._id}`}>
+                  <span>⚫</span>
                   <p>{a.title}</p>
                 </Link>
               </div>
