@@ -23,6 +23,17 @@ export default function NoteList(props) {
                   <span>⚫</span>
                   <p>{a.title}</p>
                 </Link>
+
+                <button
+                  onClick={() => {
+                    fetch("/api/post/delete", {
+                      method: "DELETE",
+                      body: a._id,
+                    });
+                  }}
+                >
+                  삭제하기
+                </button>
               </div>
             );
           })

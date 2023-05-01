@@ -1,12 +1,12 @@
 import Link from "next/link";
-import LogOutBtn from "../../components/LogOutBtn";
-import NoteList from "./NoteList";
+import LogOutBtn from "@/components/LogOutBtn";
+import NoteList from "../LoginPage/NoteList";
 import { connectDB } from "@/util/database";
-import Ad from "@/app/Ad";
-import styled from "./LoginPage.module.css";
 
-export default async function LoginPage({ session }) {
-  const db = (await connectDB).db("forum");
+import styled from "./pc.module.css";
+
+export default async function pc({ session }) {
+  const db = (await connectDB).db("note");
   let result = await db.collection("post").find().toArray();
 
   return (
@@ -24,7 +24,6 @@ export default async function LoginPage({ session }) {
       <div className={styled.main}>
         <NoteList />
       </div>
-      <Ad />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .wrap {
   padding: 10px;
+  flex: 1;
 }
 
 .nav {
@@ -12,9 +13,7 @@
 .bot {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  bottom: 10px;
-  width: 95%;
+
   gap: 5px;
 }
 .bot button {

@@ -1,5 +1,4 @@
 .wrap {
-  height: 100vh;
 }
 .nav {
   padding: 10px;
@@ -39,7 +38,7 @@
   margin-right: 5px;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 400px) {
   .wrap {
     display: none;
   }

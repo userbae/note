@@ -7,24 +7,20 @@ export default async function Detail(props) {
   const db = (await connectDB).db("note");
   let result = await db
     .collection("post")
-    .findOne({ _id: new ObjectId(props.params.id) });
+    .findOne({ _id: new ObjectId(props?.params?.id) });
 
   return (
     <div className={styled.wrap}>
       <div className={styled.nav}>
-        <h3>{result.title}</h3>
+        <h3>{result?.title}</h3>
       </div>
       <hr />
-      <pre
-        style={{
-          wordBreak: "break-all",
-          whiteSpace: "pre-wrap",
-        }}
-      >
-        {result.content}
-      </pre>
-      <div className={styled.bot}>
-        <button>수정하기</button>
+      <div dangerouslySetInnerHTML={{ __html: result?.content }}></div>
+      <div className={styled?.bot}>
+        <Link href={`/edit/${result?._id}`}>
+          <button>수정하기</button>
+        </Link>
+
         <Link href="/">
           <button>홈</button>
         </Link>
