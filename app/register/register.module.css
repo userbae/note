@@ -10,3 +10,6 @@
   flex-direction: column;
   gap: 5px;
 }
+.wrap button {
+  width: 100%;
+}

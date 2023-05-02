@@ -12,9 +12,9 @@ export default function Register() {
         <input name="password" type="password" placeholder="비번" />
         <button type="submit">가입요청</button>
 
-        <button>
-          <Link href="/">홈으로</Link>
-        </button>
+        <Link href="/">
+          <button>홈으로</button>
+        </Link>
       </form>
     </div>
   );
