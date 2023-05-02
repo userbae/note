@@ -11,7 +11,9 @@ export default async function Home() {
         <div>
           <LoginPage session={session} />
         </div>
-      ) : null}
+      ) : (
+        <LogOutPage />
+      )}
     </div>
   );
 }

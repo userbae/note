@@ -40,12 +40,6 @@
 .content textarea {
   flex: 1;
 }
-.content .pre {
-  flex: 1;
-  border: 1px solid black;
-  overflow: hidden;
-  word-break: break-all;
-}
 
 @media (max-width: 500px) {
   .content {

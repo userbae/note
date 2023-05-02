@@ -4,5 +4,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+}
+.wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }

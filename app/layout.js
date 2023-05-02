@@ -23,8 +23,9 @@ export default async function RootLayout({ children }) {
             {children}
           </div>
         ) : (
-          <LogOutPage />
+          <div>{children}</div>
         )}
+        <div className="mo">{children}</div>
       </body>
     </html>
   );

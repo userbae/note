@@ -138,6 +138,12 @@ a {
 }
 @media (max-width: 600px) {
   .pc_nav {
-    display: block;
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .mo {
+    display: none;
   }
 }

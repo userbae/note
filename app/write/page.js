@@ -2,6 +2,7 @@
 
 import styled from "./write.module.css";
 import BackBtn from "@/components/BackBtn";
+import Preview from "@/components/Preview";
 import { useState } from "react";
 
 export default function Write() {
@@ -28,10 +29,7 @@ export default function Write() {
               }}
             />
 
-            <div
-              className={styled.pre}
-              dangerouslySetInnerHTML={{ __html: content }}
-            ></div>
+            <Preview content={content} />
           </div>
           <button type="submit">추가하기</button>
           <BackBtn />

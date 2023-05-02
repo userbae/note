@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "./register.module.css";
 
 export const dynamic = "force-static";
@@ -10,6 +11,10 @@ export default function Register() {
         <input name="email" type="text" placeholder="이메일" />
         <input name="password" type="password" placeholder="비번" />
         <button type="submit">가입요청</button>
+
+        <button type="submit">
+          <Link href="/">홈으로</Link>
+        </button>
       </form>
     </div>
   );
