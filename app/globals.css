@@ -132,17 +132,12 @@ a {
   text-decoration: none;
   color: black;
 }
-body {
+
+.pc_nav {
   display: flex;
 }
-.pcnav {
-  width: 30%;
-}
-@media (max-width: 500px) {
-  body {
+@media (max-width: 600px) {
+  .pc_nav {
     display: block;
-  }
-  .pcnav {
-    display: none;
   }
 }

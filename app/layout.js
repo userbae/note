@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Pc from "./pc/page";
+import LogOutPage from "./LogOutPage/LogOutPage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export default async function RootLayout({ children }) {
     <html lang="ko">
       <body>
         {session ? (
-          <div className="pcnav">
+          <div className="pc_nav">
             <Pc session={session} />
+            {children}
           </div>
-        ) : null}
-        {children}
+        ) : (
+          <LogOutPage />
+        )}
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 .wrap {
+  width: 30%;
 }
 .nav {
   padding: 10px;
@@ -38,7 +39,7 @@
   margin-right: 5px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .wrap {
     display: none;
   }

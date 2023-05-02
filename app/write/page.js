@@ -2,7 +2,6 @@
 
 import styled from "./write.module.css";
 import BackBtn from "@/components/BackBtn";
-import Preview from "../preview/page";
 import { useState } from "react";
 
 export default function Write() {
@@ -20,22 +19,24 @@ export default function Write() {
               setTitle(e.target.value);
             }}
           />
-          <textarea
-            name="content"
-            placeholder="글내용"
-            onChange={(e) => {
-              setContent(e.target.value);
-            }}
-          />
+          <div className={styled.content}>
+            <textarea
+              name="content"
+              placeholder="글내용"
+              onChange={(e) => {
+                setContent(e.target.value);
+              }}
+            />
 
+            <div
+              className={styled.pre}
+              dangerouslySetInnerHTML={{ __html: content }}
+            ></div>
+          </div>
           <button type="submit">추가하기</button>
           <BackBtn />
         </form>
       </div>
-
-      <div>{title}</div>
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
-      <Preview title={title} />
     </div>
   );
 }

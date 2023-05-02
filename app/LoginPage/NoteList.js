@@ -12,7 +12,7 @@ export default function NoteList(props) {
       .then((result) => {
         setData(result);
       });
-  }, [data]);
+  }, []);
   return (
     <div>
       {data.length > 0
